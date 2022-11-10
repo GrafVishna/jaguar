@@ -2441,6 +2441,10 @@ section {
   opacity: 1;
 }
 
+.main__content {
+  padding: 0.9375rem 0;
+}
+
 .main__label {
   font-weight: 500;
   text-transform: uppercase;
@@ -2508,6 +2512,8 @@ section {
           flex: 0 0 45%;
   overflow: hidden;
   position: relative;
+  -ms-flex-item-align: end;
+      align-self: end;
 }
 
 .main__image img {
