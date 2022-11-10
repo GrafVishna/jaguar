@@ -2393,6 +2393,7 @@ section {
   font-weight: 500;
   text-align: center;
   font-size: 1rem;
+  line-height: 1.5;
 }
 
 .menu-open .menu__body {
@@ -2606,11 +2607,11 @@ section {
   -webkit-transform: translateY(30%);
       -ms-transform: translateY(30%);
           transform: translateY(30%);
-  -webkit-transition: opacity 1.2s ease, -webkit-transform 1s ease;
-  transition: opacity 1.2s ease, -webkit-transform 1s ease;
-  -o-transition: transform 1s ease, opacity 1.2s ease;
-  transition: transform 1s ease, opacity 1.2s ease;
-  transition: transform 1s ease, opacity 1.2s ease, -webkit-transform 1s ease;
+  -webkit-transition: opacity 1.5s ease, -webkit-transform 1s ease;
+  transition: opacity 1.5s ease, -webkit-transform 1s ease;
+  -o-transition: transform 1s ease, opacity 1.5s ease;
+  transition: transform 1s ease, opacity 1.5s ease;
+  transition: transform 1s ease, opacity 1.5s ease, -webkit-transform 1s ease;
 }
 
 .cards-benefits__card._watcher-view {
@@ -3299,15 +3300,15 @@ section {
   }
 
   .cards-benefits__card {
-    -webkit-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    -webkit-transition: border 0.4s ease, opacity 1.5s ease, -webkit-box-shadow 0.4s ease, -webkit-transform 1s ease;
+    transition: border 0.4s ease, opacity 1.5s ease, -webkit-box-shadow 0.4s ease, -webkit-transform 1s ease;
+    -o-transition: border 0.4s ease, box-shadow 0.4s ease, transform 1s ease, opacity 1.5s ease;
+    transition: border 0.4s ease, box-shadow 0.4s ease, transform 1s ease, opacity 1.5s ease;
+    transition: border 0.4s ease, box-shadow 0.4s ease, transform 1s ease, opacity 1.5s ease, -webkit-box-shadow 0.4s ease, -webkit-transform 1s ease;
   }
 
   .cards-benefits__card:hover {
-    -webkit-transform: translateY(-0.3125rem);
-        -ms-transform: translateY(-0.3125rem);
-            transform: translateY(-0.3125rem);
+    position: relative;
     border-color: rgba(0, 0, 0, 0);
     -webkit-box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
             box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
@@ -3693,10 +3694,6 @@ section {
             flex: 1 1 auto;
   }
 
-  .reviews__slider {
-    margin-bottom: 1.25rem;
-  }
-
   .swiper-slide__image {
     padding-bottom: 50%;
   }
@@ -3747,6 +3744,12 @@ section {
 @media (max-width: 22.5em) {
   .footer__email {
     font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 21.25em) {
+  .menu__link {
+    font-size: 1.4375rem;
   }
 }
 
