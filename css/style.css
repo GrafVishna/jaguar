@@ -3778,6 +3778,7 @@ section {
 
   .form-feedback__placeholder {
     left: 0.625rem;
+    font-size: 0.8125rem;
   }
 }
 
