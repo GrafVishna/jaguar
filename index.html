@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 
 <head>
 	<title>Робота в Словаччині на Jaguar Land Rover</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221110164126">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221110190233">
 <!-- 	<link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -329,28 +329,29 @@
 			<!-- ? ======================================================================================================================================================== -->
 			<section id="form" class="feedback">
 				<div class="feedback__container">
-					<h2 class="feedback__title title">Опис роботи</h2>
-					<p class="feedback__subtitle">Залишайте заявку і ми передзвонимо Вам для реєстрації на роботу:</p>
-					<form class="feedback__form form-feedback" target="_blank" action="https://jsonplaceholder.typicode.com/posts" method="post">
-						<div class="form-feedback__wrapper">
-							<!-- === -->
-							<div class="form-feedback__input">
-								<input id="name-masks" type="text" autocomplete="off" name="form[Name]" placeholder="Ім’я*" data-required="name" data-error="Будь ласка, перевірте правильність!" oninput="if(/[^a-zA-ZА-Яа-яЁёІіЇїЄє]/.test(this.value)){let Selection= this.selectionStart-1;this.value=this.value.replace(/[^a-zA-ZА-Яа-яЁёІіЇїЄє]/g,'');this.setSelectionRange(Selection, Selection);}">
-								<span class="form-feedback__placeholder">Ім’я*</span>
+					<div class="feedback__wrapper">
+						<p class="feedback__subtitle">Залишайте заявку і ми передзвонимо Вам для реєстрації на роботу:</p>
+						<form class="feedback__form form-feedback" target="_blank" action="https://jsonplaceholder.typicode.com/posts" method="post">
+							<div class="form-feedback__wrapper">
+								<!-- === -->
+								<div class="form-feedback__input">
+									<input id="name-masks" type="text" autocomplete="off" name="form[Name]" placeholder="Ім’я*" data-required="name" data-error="Будь ласка, перевірте правильність!" oninput="if(/[^a-zA-ZА-Яа-яЁёІіЇїЄє]/.test(this.value)){let Selection= this.selectionStart-1;this.value=this.value.replace(/[^a-zA-ZА-Яа-яЁёІіЇїЄє]/g,'');this.setSelectionRange(Selection, Selection);}">
+									<span class="form-feedback__placeholder">Ім’я*</span>
+								</div>
+								<!-- === -->
+								<div class="form-feedback__input">
+									<input id="tel-mask" autocomplete="off" name="form[Tel]" placeholder="Номер телефону*" data-required="tel" data-error="Будь ласка, перевірте правильність!">
+									<span class="form-feedback__placeholder">Номер телефону*</span>
+								</div>
+								<!-- === -->
+								<div class="form-feedback__input">
+									<input id="mail-mask" type="text" autocomplete="off" name="form[Email]" placeholder="Електронна пошта (не обовязково)">
+									<span class="form-feedback__placeholder">Електронна пошта (не обовязково)"</span>
+								</div>
 							</div>
-							<!-- === -->
-							<div class="form-feedback__input">
-								<input id="tel-mask" autocomplete="off" name="form[Tel]" placeholder="Номер телефону*" data-required="tel" data-error="Будь ласка, перевірте правильність!">
-								<span class="form-feedback__placeholder">Номер телефону*</span>
-							</div>
-							<!-- === -->
-							<div class="form-feedback__input">
-								<input id="mail-mask" type="text" autocomplete="off" name="form[Email]" placeholder="Електронна пошта (не обовязково)">
-								<span class="form-feedback__placeholder">Електронна пошта (не обовязково)"</span>
-							</div>
-						</div>
-						<button class="form-feedback__button btn btn--anim" type="submit">Написати</button>
-					</form>
+							<button class="form-feedback__button btn btn--anim" type="submit">Написати</button>
+						</form>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -380,7 +381,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221110164126"></script>
+	<script src="js/app.min.js?_v=20221110190233"></script>
 
 </body>
 
