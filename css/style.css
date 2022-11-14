@@ -2309,6 +2309,52 @@ section {
   }
 }
 
+@keyframes anim-btn {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+            transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+            transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+            transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+            transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pagination {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 95%;
+  }
+}
+
+@keyframes pagination {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 95%;
+  }
+}
+
 .title {
   font-family: "ElMessiri", serif;
   line-height: 1.375;
@@ -2778,6 +2824,32 @@ section {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+.reviews__pagination {
+  padding-top: 0.625rem;
+  display: none;
+}
+
+.reviews__pagination .swiper-pagination-bullet {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1.875rem;
+          flex: 0 0 1.875rem;
+  height: 0.1875rem;
+  border-radius: 0.3125rem;
+  background-color: #2e8b57;
+  opacity: 0.3;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.reviews__pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 3.125rem;
+          flex: 0 0 3.125rem;
+  opacity: 1;
 }
 
 .reviews__button-prev,
@@ -3816,6 +3888,29 @@ section {
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
   }
+
+  .reviews__navigation-slider {
+    display: none;
+  }
+
+  .reviews__pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 0.625rem;
+       -moz-column-gap: 0.625rem;
+            column-gap: 0.625rem;
+  }
+
+  .reviews__slider {
+    margin-bottom: 1.25rem;
+  }
 }
 
 @media (max-width: 47.99875em) {
@@ -3853,16 +3948,6 @@ section {
 
   .reviews__top-line:not(:last-child) {
     margin-bottom: 1.25rem;
-  }
-
-  .reviews__navigation-slider {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .reviews__slider {
-    margin-bottom: 1.875rem;
   }
 
   .swiper-slide__wrapper {
