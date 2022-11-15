@@ -6878,11 +6878,11 @@
                 slidesPerView: 1,
                 spaceBetween: 30,
                 autoHeight: false,
-                speed: 1e3,
+                speed: 1500,
                 loop: true,
                 autoplay: true,
                 autoplay: {
-                    delay: 5e3
+                    delay: 4500
                 },
                 pagination: {
                     el: ".reviews__pagination",
@@ -7034,6 +7034,10 @@
         function headerScroll() {
             addWindowScrollEvent = true;
             const header = document.querySelector("header.header");
+            const goTop = document.querySelector(".go-to-top");
+            const topShow = goTop.hasAttribute("data-scroll-show");
+            const topShowTimer = goTop.dataset.scrollShow ? goTop.dataset.scrollShow : 500;
+            const topPoint = goTop.dataset.scroll ? goTop.dataset.scroll : 1;
             const headerShow = header.hasAttribute("data-scroll-show");
             const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
             const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
@@ -7053,6 +7057,19 @@
                 } else {
                     header.classList.contains("_header-scroll") ? header.classList.remove("_header-scroll") : null;
                     if (headerShow) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
+                }
+                clearTimeout(timer);
+                if (scrollTop >= topPoint) {
+                    !goTop.classList.contains("_top-scroll") ? goTop.classList.add("_top-scroll") : null;
+                    if (topShow) {
+                        if (scrollTop > scrollDirection) goTop.classList.contains("_top-show") ? goTop.classList.remove("_top-show") : null; else !goTop.classList.contains("_top-show") ? goTop.classList.add("_top-show") : null;
+                        timer = setTimeout((() => {
+                            !goTop.classList.contains("_top-show") ? goTop.classList.add("_top-show") : null;
+                        }), topShowTimer);
+                    }
+                } else {
+                    goTop.classList.contains("_top-scroll") ? goTop.classList.remove("_top-scroll") : null;
+                    if (topShow) goTop.classList.contains("_top-show") ? goTop.classList.remove("_top-show") : null;
                 }
                 scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
             }));
