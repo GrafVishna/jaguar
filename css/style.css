@@ -2242,6 +2242,8 @@ section {
 
 .icon-menu {
   display: none;
+  -webkit-filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.22));
+          filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.22));
 }
 
 .main {
